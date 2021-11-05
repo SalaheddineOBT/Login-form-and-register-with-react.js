@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "fs": "^0.0.1-security",
+    "json-server": "^0.17.0",
+    "md5": "^2.3.0",
+    "react-router-dom": "^5.3.0",
+    "write-json-file": "^5.0.0"
+  }
+}
