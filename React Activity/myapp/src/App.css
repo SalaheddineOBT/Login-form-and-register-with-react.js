@@ -1,0 +1,76 @@
+.App{
+    margin: auto;
+    border-radius: 1rem;
+    overflow-y: scroll;
+    -webkit-box-shadow: 0px 0px 26px 9px #000000; 
+    box-shadow: 0px 0px 26px 9px #000000;
+    margin-top: 3.5rem;
+    width: 35rem;
+    background: #064372;
+    height: 34rem;
+}
+.app2{
+    padding:1rem;
+}
+.contain{
+    padding:1rem;
+    text-align: center;
+}
+footer{
+    clear: both;
+    font-size: 1.3rem;
+    padding-top: 17rem;
+    font-weight: 500;
+    color: #bbb;
+    text-align: center;
+}
+.contain a{
+    font-size: 1.4rem;
+    position: relative;
+    font-weight: 500;
+    overflow: hidden;
+    padding:.5rem;
+    padding-bottom: .7rem;
+    color: #E05353;
+    transition: .4s linear;
+}
+.contain h1{
+    padding-bottom: 1.4rem;
+    color: #eee;
+}
+ .contain a::before{
+    content: '';
+    width: 0%;
+    top: 0;
+    right: 0;
+    height: 2px;
+    position: absolute;
+    transition: width .4s linear;
+    background: #E05353;
+}
+.contain a::after{
+    content: '';
+    width: 0;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    position: absolute;
+    background: #E05353;
+    transition: width .4s linear;
+}
+ .contain a:hover::before,
+.contain a:hover::after{
+    width: 100%;
+}
+.contain a:hover{
+    border-left: 2px solid #E05353;
+    border-right: 2px solid #E05353;
+}
+
+.tbt td{
+    padding:1rem;
+    color:#fff;
+}
+.tbt th{
+    color:#fff;
+}

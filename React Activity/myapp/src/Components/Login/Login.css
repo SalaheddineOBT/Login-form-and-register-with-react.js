@@ -1,0 +1,80 @@
+ .Log{
+    padding:1rem;
+} 
+th{
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+.Log th{
+    padding-bottom: 4rem;
+}
+.Log h1{
+    color: #FFF;
+}
+td{
+    padding: .3rem;
+}
+table{
+    margin: auto;
+    width: 100%;
+}
+label{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #eee ;
+}
+.titl{
+    color: #fff;
+    text-align: center;
+}
+input{
+    padding: .5rem;
+    border: none;
+    width: 100%;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+}
+input:focus{
+    border-color:#fff;
+}
+button{
+    width: 50%;
+    border-radius: .3rem;
+    padding:.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: .5rem;
+    border:none;
+    color: #00335A;
+    background: #b4f7f7;
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    margin-top:.3rem;
+    transition: .3s linear;
+}
+button:hover{
+    background:#00ece8 ;
+}
+.tdi{
+    text-align: center;
+    padding-top: 2rem;
+}
+.tdi1{
+    text-align: center;
+}
+.ts{
+    padding:0;
+    font-size: 1.1rem;
+    color: red;
+    padding-bottom: .5rem;
+    padding-left:1rem;
+    padding-bottom: 1rem;
+}
+h1.err{
+    padding:.5rem;
+    font-size: 1.3rem;
+    background: rgb(241, 59, 59);
+    text-align: center ;
+    width: 50% ;
+    margin: auto;
+}

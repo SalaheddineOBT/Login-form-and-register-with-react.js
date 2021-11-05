@@ -1,0 +1,8 @@
+body{
+    background: #00335A;
+    display: flex;
+    width: 98.5%;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
