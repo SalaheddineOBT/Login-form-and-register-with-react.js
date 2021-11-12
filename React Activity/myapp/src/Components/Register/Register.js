@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import "./Register.css";
 import usr from "../../data.json";
 import axios from "axios";
+import md5 from "md5";
 
 function RegisterPage(){
 
@@ -32,7 +33,7 @@ function RegisterPage(){
                     id:usr.users[usr.users.length-1].id+1,
                     username:formValues.username,
                     email:formValues.email,
-                    password:formValues.password
+                    password:md5(formValues.password)
                 }
             );
 		}
@@ -40,9 +41,11 @@ function RegisterPage(){
 		const hundlSubmit=(e) => {
 			e.preventDefault();
 			setError(Validation(formValues));
-            if(Object.keys(formError).length==0){
-                axios.post("http://localhost:300/users/",fov)
-                .then(alert("Success Register ."));
+            if(Object.keys(formError).length===0){
+                if(fov.username!="" && fov.password!="" && fov.email!=""){
+                    axios.post("http://localhost:300/users/",fov)
+                    .then(alert("Success Register ."));
+                }
             }
 		}
 		

@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "fs": "^0.0.1-security",
     "json-server": "^0.17.0",
+    "md5": "^2.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-fs": "^0.0.0",

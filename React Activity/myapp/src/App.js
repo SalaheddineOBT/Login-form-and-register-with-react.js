@@ -2,10 +2,12 @@ import React, {useState } from "react";
 import NavBar from "./Components/Nav/Nav";
 import LoginPage from "./Components/Login/Login";
 import RegisterPage from "./Components/Register/Register";
-import "./App.css";
 import { BrowserRouter , Route } from 'react-router-dom';
 import usr from "./data.json";
-
+import md5 from 'md5';
+import Comp from "./Components/Comp";
+import Home from "./Components/Home/Home";
+import "./App.css";
 
 function App(){
 
@@ -15,13 +17,13 @@ function App(){
       email:''
 		};
 
-    const d=new Date();
-
     const [formVal,setVal]=useState(user);
 		const [formErr,setErr]=useState("");
 
     const lgout=(e)=>{
         e.preventDefault();
+        localStorage.removeItem('UserName')
+        localStorage.clear();
         setVal({
           username:"",
           password:"",
@@ -30,17 +32,16 @@ function App(){
         setErr("");
     }
 
-
     var em='';
     const logining=(dt)=>{
       if(dt.username!="" && dt.password!=""){
         var v=false;
         const p=usr.users.length;
-        let i;
-        for(i=0;i<p;i++){
-          if(dt.username==usr.users[i].email && dt.password==usr.users[i].password){
+        for(let i=0;i<p;i++){
+          if(dt.username==usr.users[i].email && md5(dt.password)==usr.users[i].password){
             v=true;
-            em=usr.users[i].username
+            em=usr.users[i].username;
+            localStorage.setItem("UserName",em);
           }
         }
         if(v){
@@ -55,7 +56,7 @@ function App(){
             password:"",
             email:''
           });
-          setErr("User Not Existe !!!!");
+          setErr("User Name Or Password Is Incorrect !!!!");
         }
       }
     }
@@ -66,21 +67,16 @@ function App(){
           <div className="App">
             <NavBar />
             <div className="app2">
-                <Route exact path="/Login" render={()=>
+                <Route  path="/Login" render={()=>
                 (
                   <LoginPage logining={logining} errored={formErr} />
                 )} /> 
                 <Route path="/Register" component={RegisterPage} />
+                <Route exact path="/" component={Comp} />
             </div>
           </div>
         ):(
-           <div>
-              <div className="contain">
-                  <h1>Welcome {formVal.email} </h1>
-                  <a onClick={lgout} href="/Login">Logout</a>
-              </div>
-              <footer>&copy; 2020 - {d.getFullYear()} | Salaheddine</footer>
-          </div>
+           <Home logout={lgout} />
         )
         }
         </BrowserRouter>

@@ -3,45 +3,14 @@
     {
       "id": 1,
       "username": "Anass Harrou",
-      "email": "anass@gmail.com",
-      "password": "An123"
+      "email": "Harrou@file.com",
+      "password": "a37513b27f004aef5f187692df35f480"
     },
     {
       "id": 2,
-      "username": "Salah Taib",
+      "username": "Salaheddine ",
       "email": "salah@gmail.com",
-      "password": "sh123"
-    },
-    {
-      "id": 3,
-      "username": "Salahed",
-      "email": "sdine5051@gmail.com",
-      "password": "SALAH",
-      "password2": "SALAH2"
-    },
-    {
-      "id": 4,
-      "username": "wordpress",
-      "email": "word@gmail.com",
-      "password": "Word123"
-    },
-    {
-      "id": 5,
-      "username": "Hicham Salmon",
-      "email": "Hich@gmail.com",
-      "password": "Hc123"
-    },
-    {
-      "id": 6,
-      "username": "Hala Tooke",
-      "email": "Hl@gmail.com",
-      "password": "Hl123"
-    },
-    {
-      "id": 7,
-      "username": "Ilham",
-      "email": "Ily@gmail.com",
-      "password": "Il123"
+      "password": "178d52a8802f7390bb922c546952131c"
     }
   ]
 }

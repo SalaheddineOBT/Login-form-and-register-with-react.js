@@ -56,7 +56,7 @@ a:hover::after,
 a:hover::before{
     width: 100%;
 } 
-.active{
+a.active{
     color: #155a66;
     position: relative;
 }

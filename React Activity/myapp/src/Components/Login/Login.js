@@ -1,8 +1,6 @@
 import React, { Component }  from 'react';
 import {useState} from "react";
-
 import "./Login.css";
-
 function LoginPage({logining,errored}){
 
 		const users={
